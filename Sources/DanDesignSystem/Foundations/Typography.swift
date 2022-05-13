@@ -26,14 +26,24 @@ public extension UIFont {
 public final class Typography {
 
     public enum DanFonts: String {
-        case oleaRegular = "OleoScriptSwashCaps-Regular"
+        case baskervilleRegular = "LibreBaskerville-Regular"
+        case baskervilleItalic = "LibreBaskerville-Italic"
+        case baskervilleBold = "LibreBaskerville-Bold"
 
         func toString() -> String {
             return self.rawValue
         }
 
         static func getRegular() -> String {
-            self.oleaRegular.rawValue
+            return self.baskervilleRegular.rawValue
+        }
+        
+        static func getBold() -> String {
+            return self.baskervilleBold.rawValue
+        }
+        
+        static func getItalic() -> String {
+            return self.baskervilleItalic.rawValue
         }
     }
     
@@ -44,6 +54,14 @@ public final class Typography {
         case regularLarge
         case regularExtraLarge
         case regularSuper
+        case italicMini
+        case italicSmall
+        case italicMedium
+        case italicLarge
+        case boldMini
+        case boldSmall
+        case boldMedium
+        case boldLarge
         
         public func get() -> UIFont? {
             switch self {
@@ -56,10 +74,25 @@ public final class Typography {
             case .regularLarge:
                 return UIFont(name: Typography.DanFonts.getRegular(), size: 18)
             case .regularExtraLarge:
-                print("___")
                 return UIFont(name: Typography.DanFonts.getRegular(), size: 24)
             case .regularSuper:
                 return UIFont(name: Typography.DanFonts.getRegular(), size: 32)
+            case .italicMini:
+                return UIFont(name: Typography.DanFonts.getItalic(), size: 12)
+            case .italicSmall:
+                return UIFont(name: Typography.DanFonts.getItalic(), size: 14)
+            case .italicMedium:
+                return UIFont(name: Typography.DanFonts.getItalic(), size: 16)
+            case .italicLarge:
+                return UIFont(name: Typography.DanFonts.getItalic(), size: 18)
+            case .boldMini:
+                return UIFont(name: Typography.DanFonts.getBold(), size: 12)
+            case .boldSmall:
+                return UIFont(name: Typography.DanFonts.getBold(), size: 14)
+            case .boldMedium:
+                return UIFont(name: Typography.DanFonts.getBold(), size: 16)
+            case .boldLarge:
+                return UIFont(name: Typography.DanFonts.getBold(), size: 18)
             }
         }
     }
@@ -70,10 +103,10 @@ public final class Typography {
 public extension UILabel {
     
     func dsConfigure(with text: String? = nil, font: Typography.FontsWithSize, color: UIColor = UIColor.gray) {
-        self.dsBaseConfigure(with: text, font: font, color: color)
-    }
-    func dsBaseConfigure(with text: String?, font: Typography.FontsWithSize, color: UIColor = UIColor.gray) {
-        self.text = text ?? ""
+        if let text = text {
+            self.text = text
+        }
+
         if self.textAlignment != .center {
             self.textAlignment = .left
         }

@@ -1,2 +1,3 @@
 # DanDesignSystem
-Design System Concept by Dan
+
+A description of this package.

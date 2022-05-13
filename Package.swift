@@ -22,7 +22,9 @@ let package = Package(
             name: "DanDesignSystem",
             dependencies: [],
         resources: [
-            .process("Resources/Fonts/OleoScriptSwashCaps-Regular.ttf")
+            .process("Resources/Fonts/LibreBaskerville-Regular.ttf"),
+            .process("Resources/Fonts/LibreBaskerville-Italic.ttf"),
+            .process("Resources/Fonts/LibreBaskerville-Bold.ttf")
         ]),
         .testTarget(
             name: "DanDesignSystemTests",
