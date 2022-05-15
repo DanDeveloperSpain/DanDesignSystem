@@ -102,7 +102,7 @@ public final class Typography {
 /// Configure Labels
 public extension UILabel {
     
-    func dsConfigure(with text: String? = nil, font: Typography.FontsWithSize, color: UIColor = UIColor.gray) {
+    func dsConfigure(with text: String? = nil, font: Typography.FontsWithSize, color: UIColor = .dsGrayPure) {
         if let text = text {
             self.text = text
         }
