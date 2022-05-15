@@ -13,7 +13,7 @@ public extension UIView {
     /// - Parameters:
     ///   - colors: array of colors to gradient.
     ///   - startPoint: gradient start place on screen.
-    ///   - endPoint: gradient end place on screen
+    ///   - endPoint: gradient end place on screen.
     func addGradient(colors: [UIColor] = [.dsBluePure, .dsWhite], startPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint = CGPoint(x: 1.0, y: 1.0)) {
 
         let gradient = CAGradientLayer()

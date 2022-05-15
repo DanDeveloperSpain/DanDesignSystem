@@ -10,7 +10,6 @@ import UIKit
 public enum TypeButton {
     case primary
     case secondary
-    case irreversible
 
     public var name: String {
         return String(describing: self)
@@ -30,6 +29,14 @@ public enum StateButton {
 
 public extension UIButton {
 
+    
+    /// Configure styles buttons
+    /// - Parameters:
+    ///   - text: text of the button.
+    ///   - image: image for button.
+    ///   - style: button style.
+    ///   - state: button state.
+    ///   - width: width button constraint.
     func dsConfigure(text: String? = nil, image: UIImage? = nil, style: TypeButton? = .primary, state: StateButton? = .enabled, width: CGFloat = 100) {
 
         /// text
@@ -61,12 +68,12 @@ public extension UIButton {
             
             switch state {
             case .enabled:
-                self.backgroundColor = .dsBluePure
-                self.shadow(shadow: .small, color: .dsBluePure)
+                self.backgroundColor = .dsPrimaryPure
+                self.shadow(shadow: .small, color: .dsPrimaryPure)
                 self.isUserInteractionEnabled = true
             case .disabled:
-                self.backgroundColor = .dsBlueLight
-                self.shadow(shadow: .small, color: .dsBlueLight)
+                self.backgroundColor = .dsPrimaryLight
+                self.shadow(shadow: .small, color: .dsPrimaryLight)
                 self.isUserInteractionEnabled = false
             default:
                 break
@@ -89,21 +96,6 @@ public extension UIButton {
                 break
             }
 
-        case .irreversible:
-            self.setTitleColor(.dsWhite, for: .normal)
-            
-            switch state {
-            case .enabled:
-                self.backgroundColor = .dsErrorPure
-                self.shadow(shadow: .small, color: .dsErrorPure)
-                self.isUserInteractionEnabled = true
-            case .disabled:
-                self.backgroundColor = .dsErrorLight
-                self.shadow(shadow: .small, color: .dsErrorLight)
-                self.isUserInteractionEnabled = false
-            default:
-                break
-            }
         default:
             break
         }

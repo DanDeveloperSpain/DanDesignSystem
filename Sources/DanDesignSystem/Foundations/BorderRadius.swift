@@ -13,7 +13,7 @@ public enum Radius: CGFloat {
     case large = 16
     case full = 0
 
-    public var borderName: String {
+    public var radiusName: String {
         switch self {
         case .small:
             return "Small"
