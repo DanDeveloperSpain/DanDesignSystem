@@ -16,5 +16,10 @@ public enum DSGetImage: String  {
     /// Icons
     case icon_cross
     case icon_info
+    case icon_backButton
+    case icon_mail
+
+    /// Images
+    case marverComics
 
 }
