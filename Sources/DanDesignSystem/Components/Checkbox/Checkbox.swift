@@ -70,6 +70,16 @@ public final class CheckboxView: UIView {
     // MARK: - Init
     // ---------------------------------
 
+    /// Instantiate and configure CheckboxView
+    /// - Parameters:
+    ///   - state: set the Checkbox state
+    ///   - id: set id for identifier
+    ///   - title: title for the Checkbox
+    ///   - titleSize: title size for Checkbox
+    ///   - subTitle: subTitle for the Checkbox
+    ///   - isLinkInteraction: true if the Checkbox title is a link
+    ///   - delegate: indicate which controller will implement the delegate methods
+    /// - Returns: a configured Checkbox ready to display and use
     public class func instance(state: CheckboxSate, id: Int, title: String, titleSize: CheckboxTitleSize = .medium, subTitle: String = "", isLinkInteraction: Bool? = false, delegate: CheckboxViewDelegate?) -> CheckboxView {
         let view = UINib(nibName: "CheckboxView", bundle: Bundle.module).instantiate(withOwner: nil, options: nil)[0] as! CheckboxView
 

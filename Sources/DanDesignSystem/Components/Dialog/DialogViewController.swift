@@ -51,6 +51,16 @@ public final class DialogViewController: UIViewController {
     // MARK: - Init
     // ---------------------------------
 
+    /// Set a modal to display
+    /// - Parameters:
+    ///   - image: modal image
+    ///   - title: modal title
+    ///   - subtitle: modal subTitle
+    ///   - titlePrimaryButton: title for the main button of the modal
+    ///   - titleSecondaryButton: title for the secondary button of the modal
+    ///   - fullScreen: true if the modal will be displayed full screen
+    ///   - hideCloseButton: true if to hide the close button and force the user to check an option
+    ///   - delegate: indicate which controller will implement the delegate methods
     public init(image: UIImage? = nil, title: String, subtitle: String? = nil, titlePrimaryButton: String, titleSecondaryButton: String? = nil, fullScreen: Bool? = false, hideCloseButton: Bool? = true, delegate: DialogViewControllerDelegate) {
         super.init(nibName: "DialogViewController", bundle: Bundle.module)
         

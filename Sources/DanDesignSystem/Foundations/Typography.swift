@@ -101,7 +101,12 @@ public final class Typography {
 
 /// Configure Labels
 public extension UILabel {
-    
+
+    /// Function to set a label
+    /// - Parameters:
+    ///   - text: label text to display
+    ///   - font: font type to display
+    ///   - color: color text to display
     func dsConfigure(with text: String? = nil, font: Typography.FontsWithSize, color: UIColor = .dsGrayPure) {
         if let text = text {
             self.text = text

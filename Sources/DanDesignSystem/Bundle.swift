@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Bundle {
-    
+
     static let dsBundle = Bundle(identifier: "DanDS-resources")
-    
+
 }

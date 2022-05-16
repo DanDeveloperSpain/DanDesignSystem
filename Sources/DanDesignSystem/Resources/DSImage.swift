@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// Function to get an image hosted on the DS. It can only be established if it is registered so as not to have errors
+/// - Parameter name: image name
+/// - Returns: an image hosted on the DesignSystem
 public func DSImage(named name: DSGetImage) -> UIImage? {
     UIImage(named: name.rawValue, in: Bundle.module, compatibleWith: nil)
 }

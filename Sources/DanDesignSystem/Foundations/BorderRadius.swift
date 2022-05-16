@@ -48,6 +48,11 @@ public enum Border: CGFloat {
 
 public extension UIView {
 
+    /// Function to set cornerRadius and Border to a view
+    /// - Parameters:
+    ///   - radius: cornerRadius size
+    ///   - border: Border size
+    ///   - colorBorder: set border color
     func boderRadius(radius: Radius, border: Border = .none, colorBorder: Bool = true){
         
         switch radius {

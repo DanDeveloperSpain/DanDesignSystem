@@ -29,7 +29,6 @@ public enum StateButton {
 
 public extension UIButton {
 
-    
     /// Configure styles buttons
     /// - Parameters:
     ///   - text: text of the button.
@@ -69,11 +68,11 @@ public extension UIButton {
             switch state {
             case .enabled:
                 self.backgroundColor = .dsPrimaryPure
-                self.shadow(shadow: .small, color: .dsPrimaryPure)
+                self.shadow(shadow: .small, color: .dsBluePure)
                 self.isUserInteractionEnabled = true
             case .disabled:
                 self.backgroundColor = .dsPrimaryLight
-                self.shadow(shadow: .small, color: .dsPrimaryLight)
+                self.shadow(shadow: .small, color: .dsBlueLight)
                 self.isUserInteractionEnabled = false
             default:
                 break

@@ -55,7 +55,7 @@ public extension UIColor {
     
     
     
-    ///Initialization
+    /// Initialization
     private convenience init?(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
@@ -91,7 +91,7 @@ public extension UIColor {
         return toHex()
     }
     
-    ///Util
+    /// Util
     private func toHex(alpha: Bool = false) -> String? {
         guard let components = cgColor.components, components.count >= 3 else {
             return nil

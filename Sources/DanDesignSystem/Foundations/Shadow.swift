@@ -36,6 +36,10 @@ public enum Shadow {
 
 public extension UIView {
 
+    /// Function to set shadow to a view
+    /// - Parameters:
+    ///   - shadow: shadow type
+    ///   - color: shadow color
     func shadow(shadow: Shadow, color : UIColor){
 
         switch shadow {

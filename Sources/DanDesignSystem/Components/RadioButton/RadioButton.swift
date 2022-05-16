@@ -72,6 +72,15 @@ public final class RadioButtonView: UIView {
     // MARK: - Init
     // ---------------------------------
 
+    /// Instantiate and configure RadioButtonView
+    /// - Parameters:
+    ///   - state: set the RadioButton state
+    ///   - size: set RadioButtonView size
+    ///   - id: set id for identifier
+    ///   - title: title for the RadioButton
+    ///   - subTitle: subTitle for the RadioButton
+    ///   - delegate: indicate which controller will implement the delegate methods
+    /// - Returns: a configured RadioButton ready to display and use
     public class func instance(state: RadioButtonSate, size: RadioButtonSize = .large, id: Int, title: String, subTitle: String = "", delegate: RadioButtonViewDelegate?) -> RadioButtonView {
         let view = UINib(nibName: "RadioButtonView", bundle: Bundle.module).instantiate(withOwner: nil, options: nil)[0] as! RadioButtonView
 
