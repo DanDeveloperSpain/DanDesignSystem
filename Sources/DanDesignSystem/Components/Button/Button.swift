@@ -67,7 +67,7 @@ public extension UIButton {
             
             switch state {
             case .enabled:
-                self.backgroundColor = .dsPrimaryPure
+                self.backgroundColor = .dsBluePure
                 self.shadow(shadow: .small, color: .dsBluePure)
                 self.isUserInteractionEnabled = true
             case .disabled:

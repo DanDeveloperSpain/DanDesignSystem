@@ -47,7 +47,7 @@ public extension UIColor {
         /// Blue
     static let dsBluePure = UIColor(hex: "#2962FF")!
     static let dsBlueDark = UIColor(hex: "#0D47A1")!
-    static let dsBlueLight = UIColor(hex: "#64B5F6")!
+    static let dsBlueLight = UIColor(hex: "#BBDEFB")!
         /// Purple
     static let dsPurplePure = UIColor(hex: "#AA00FF")!
     static let dsPurpleDark = UIColor(hex: "#4A148C")!
