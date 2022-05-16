@@ -71,7 +71,7 @@ public extension UIButton {
                 self.shadow(shadow: .small, color: .dsBluePure)
                 self.isUserInteractionEnabled = true
             case .disabled:
-                self.backgroundColor = .dsPrimaryLight
+                self.backgroundColor = .dsBlueLight
                 self.shadow(shadow: .small, color: .dsBlueLight)
                 self.isUserInteractionEnabled = false
             default:
