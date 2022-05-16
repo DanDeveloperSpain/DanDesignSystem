@@ -26,7 +26,7 @@ public extension UIColor {
     ///Typography
     static let dsGrayPure = UIColor(hex: "#757575")!
     static let dsGrayDark = UIColor(hex: "#212121")!
-    static let dsGrayLight = UIColor(hex: "#9E9E9E")!
+    static let dsGrayLight = UIColor(hex: "#E0E0E0")!
     
     /// Error
     static let dsErrorPure = UIColor(hex: "#F44336")!
